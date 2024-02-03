@@ -19,6 +19,7 @@ const Navbar = () => {
                             <li><BsFillSunFill className='cursor-pointer text-2xl' onClick={toggleScheme}/></li>
                         )}
                         <li><Link to={"/about"}>about</Link></li>
+                        <li><Link to={"/blog"}>blog</Link></li>
                         <li><Link to={"/portfolio"}>portfolio</Link></li>
                     </ul>
                 </nav>

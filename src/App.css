@@ -35,3 +35,6 @@
     
 }
 
+.shadow-lightmode {
+    @apply shadow-md shadow-teal-600
+}

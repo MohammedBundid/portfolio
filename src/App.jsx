@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import About from './pages/About'
 import { ThemeProvider } from './ThemeContext'
 import NotFound from './pages/NotFound'
+import Projects from './pages/Projects'
+import Blogpage from './pages/blog/Blogpage'
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/blog' element={<Blogpage />} />
+          <Route path='/portfolio' element={<Projects />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
