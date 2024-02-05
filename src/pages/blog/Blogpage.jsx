@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Blogpage = () => {
   const [data, setData] = useState([])
-  const url = 'http://localhost:4000/api/blog/all'
+  const url = 'https://blog-api-7i4w.onrender.com/api/blog/all'
 
   useEffect(() => {
     const fetchBlogs = async () => {
