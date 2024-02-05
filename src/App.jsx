@@ -8,6 +8,8 @@ import { ThemeProvider } from './ThemeContext'
 import NotFound from './pages/NotFound'
 import Projects from './pages/Projects'
 import Blogpage from './pages/blog/Blogpage'
+import BlogPost from './components/BlogPost'
+import SingleBlog from './pages/blog/SingleBlog'
 
 function App() {
 
@@ -19,6 +21,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/blog' element={<Blogpage />} />
+          <Route path='/blog/:id' element={<SingleBlog />} />
           <Route path='/portfolio' element={<Projects />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
