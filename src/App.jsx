@@ -8,7 +8,6 @@ import { ThemeProvider } from './ThemeContext'
 import NotFound from './pages/NotFound'
 import Projects from './pages/Projects'
 import Blogpage from './pages/blog/Blogpage'
-import BlogPost from './components/BlogPost'
 import SingleBlog from './pages/blog/SingleBlog'
 
 function App() {
