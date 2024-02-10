@@ -9,8 +9,11 @@ import NotFound from './pages/NotFound'
 import Projects from './pages/Projects'
 import Blogpage from './pages/blog/Blogpage'
 import SingleBlog from './pages/blog/SingleBlog'
+import useKeepAlive from './hooks/useKeepAlive';
 
 function App() {
+  const url = "https://blog-api-7i4w.onrender.com/keep-alive"
+  useKeepAlive(url, 10000)
 
   return (
     <ThemeProvider>
