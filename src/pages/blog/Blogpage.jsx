@@ -2,24 +2,12 @@ import React, { useEffect, useState } from "react";
 import Main from "../../components/ui/Main";
 import BlogPost from "../../components/BlogPost";
 import { Link } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
 const Blogpage = () => {
-  const [data, setData] = useState([])
   const url = 'https://blog-api-7i4w.onrender.com/api/blog/all'
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await fetch(url)
-        const result = await response.json()
-        setData(result)
-      } catch (error) {
-        console.error("error fetching data from api", error)
-      }
-    }
-
-    fetchBlogs()
-  }, [url])
+  const { data, isPending, error } = useFetch(url)
+  
 
   return (
     <Main>
@@ -32,6 +20,8 @@ const Blogpage = () => {
           />
 
           <div className="w-full h-full flex flex-col gap-2">
+            { error && <div>{ error }</div>}
+            { isPending && <div>loading ...</div>}
             {data && data.map((blog, index) => {
               return (
                   <Link to={`/blog/${blog._id}`} key={blog._id}>
