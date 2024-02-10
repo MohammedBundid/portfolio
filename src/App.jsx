@@ -13,7 +13,7 @@ import useKeepAlive from './hooks/useKeepAlive';
 
 function App() {
   const url = "https://blog-api-7i4w.onrender.com/keep-alive"
-  useKeepAlive(url, 10000)
+  useKeepAlive(url, 60000)
 
   return (
     <ThemeProvider>
