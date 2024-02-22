@@ -23,13 +23,15 @@ const Card = ({ title, img, hidden, desc, myLink }) => {
         )}
       </div>
       <p className="px-2 text-center">{desc}</p>
-      <Link
+      {!myLink === 'none' && (
+        <Link
         className="text-center font-medium text-teal-500 mt-3 flex gap-2 items-center justify-center"
         to={myLink}
       >
         <p>go to site</p>
         <IoIosLogOut size={22} />
       </Link>
+      )}
     </div>
   );
 };
